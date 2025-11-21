@@ -92,6 +92,17 @@ def generate_questions(theme, count):
     "options": ["paths", "deps", "shim", "map"],
     "correct": 0,
     "explanation": "Модулі оголошуються в paths."
+  }},
+  {{
+    "question": "Як оголосити модуль у requirejs-config.js?",
+    "options": [
+      "var config = {{ map: {{ '*': {{ myModule: 'Vendor_Module/js/my-module' }} }} }};",
+      "var config = {{ paths: {{ 'myModule': 'Vendor_Module/my-module' }} }};",
+      "var config = {{ shim: {{ myModule: {{ deps: ['jquery'] }} }} }};",
+      "define(['myModule'], function() {{ console.log('Module registered'); }});"
+    ],
+    "correct": 0,
+    "explanation": "Модуль оголошують через map у requirejs-config.js, де вказують ключ та шлях до JS-файлу."
   }}
 ]
 
